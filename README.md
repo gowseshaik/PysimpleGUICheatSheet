@@ -1,5 +1,9 @@
 ## PysimpleGUICheatSheet
-
+**Simple GUI program , which shows as follows** 
+          > 1. text boxes for user inputs  
+          > 2. shows loading gif image
+          > 3. and then shows a popup windows with your input text as output window
+          
 ``` python 
 import PySimpleGUI as sg
 
@@ -29,7 +33,11 @@ if f_name_empty & s_name_empty:
 else:
     sg.popup_scrolled('Oops!, You entered: None , Please try again!')
 ```
-
+**For to show the loading gif image on window screen as a front popup loading image**
+``` python
+sg.popup_animated(sg.DEFAULT_BASE64_LOADING_GIF, title="Please Wait", background_color='white',
+                          time_between_frames=100)
+ ```
 **it will shows the popup with title and close, minimize and maximize buttons**
 ``` python
 sg.popup('You entered', f_name, s_name)
