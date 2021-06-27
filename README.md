@@ -699,8 +699,8 @@ event, values = window.read()
 ```
 
 **For more information, please reffer below links**
-[PySimpleGUI GitGub](https://github.com/PySimpleGUI/PySimpleGUI)
-[PysimpleGUI Cookbook](https://pysimplegui.readthedocs.io/en/latest/cookbook/)
+[PySimpleGUI GitGub]: <https://github.com/PySimpleGUI/PySimpleGUI>
+[PysimpleGUI Cookbook]: <https://pysimplegui.readthedocs.io/en/latest/cookbook/>
 
 
 
