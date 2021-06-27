@@ -30,11 +30,11 @@ else:
     sg.popup_scrolled('Oops!, You entered: None , Please try again!')
 ```
 
- it will shows the popup with title and close, minimize and maximize buttons
+**it will shows the popup with title and close, minimize and maximize buttons**
 ``` python
 sg.popup('You entered', f_name, s_name)
 ```
- it will shows the popup without title, - [] X buttons
+**it will shows the popup without title, - [] X buttons**
 ``` python 
 sg.popup_annoying('You entered', f_name, s_name)
 sg.popup_no_border('You entered', f_name, s_name)
