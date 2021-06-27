@@ -1,5 +1,6 @@
 # PysimpleGUICheatSheet
 
+``` python 
 import PySimpleGUI as sg
 
 layout = [[sg.Text('My one-shot window.')],
@@ -30,7 +31,7 @@ else:
 
 # it will shows the popup with title and close, minimize and maximize buttons
 ``` python
-sg.popup('You entered', f_name, s_name) ```
+sg.popup('You entered', f_name, s_name)
 
 # it will shows the popup without title, - [] X buttons
 # sg.popup_annoying('You entered', f_name, s_name)
