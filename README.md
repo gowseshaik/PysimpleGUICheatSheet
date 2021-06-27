@@ -43,95 +43,95 @@ sg.popup_no_frame('You entered', f_name, s_name)
 sg.popup_no_titlebar('You entered', f_name, s_name)
 ```
 
-# it will show the popup without any wait
+**it will show the popup without any wait**
 ``` python 
 sg.popup_no_wait
 ```
 
-# to auto close the popup windows
+**to auto close the popup windows**
 ``` python 
 sg.popup_auto_close('You entered', f_name, s_name)
 ```
 
-# to popup a window as an error
+**to popup a window as an error**
 ``` python 
 sg.popup_error('You entered', f_name, s_name)
 ```
 
-# to popup a cancelled window
+**to popup a cancelled window**
 ``` python 
 sg.popup_cancel('You entered', f_name, s_name)
 ```
 
-# to popup a window with ok, cancel buttons
+**to popup a window with ok, cancel buttons**
 ``` python 
 sg.popup_ok_cancel('You entered', f_name, s_name)
 ```
-# To popup a windows with scrolled button
+**To popup a windows with scrolled button**
 ``` python 
 sg.popup_scrolled('You entered', f_name, s_name)
 sg.popup_scrolled('You entered'*50) # for longer message
 ```
 
-# To popup a window with a text and button color
+**To popup a window with a text and button color**
 ``` python 
 sg.popup("hi this is Gouse", button_color=("Blue", 'red'), background_color='gray', text_color='yellow')
 ```
 
-# To get the timeout
+**To get the timeout**
 ``` python 
 sg.popup_timed("please wait until timed:", auto_close_duration=3)
 ```
 
-# to show the buttons as yes or no
+**to show the buttons as yes or no**
 ``` python 
 sg.popup_yes_no("You have entered:")
 ```
 
 ## ---------INPUT POPUPS-----------*
-# to get the current date
+**to get the current date**
 ``` python 
 sg.popup_get_date()
 ```
 
-# to get a file from a browse button
+**to get a file from a browse button**
 ``` python 
 sg.popup_get_file("Please get the file")
 ```
 
-# to get a folder from a browser button
+**to get a folder from a browser button**
 ``` python 
 sg.popup_get_folder("Please select a folder:")
 ```
 
-# to get an input as text
+**to get an input as text**
 ``` python 
 sg.popup_get_text("Please enter something:")
 ```
 
-# to show an icon in your popup
+**to show an icon in your popup**
 ``` python 
 sg.popup("HI Gouse", icon='./construction.ico')
 ```
 
-# to show an image inside your window
+**to show an image inside your window**
 ``` python 
 sg.popup("HI Gouse", image='./construction.png', title='GMS Technologies')
 ```
 
-# to show your software window at a specific location
+**to show your software window at a specific location**
 ``` python 
 sg.popup("Hi Gouse", location=(200, 200))
 ```
 
-# to move/ sticky your windows at one location
+**to move/ sticky your windows at one location**
 ``` python 
 sg.popup("Hi Gouse", grab_anywhere=True)
 sg.popup("Hi Gouse", grab_anywhere=False)
 ```
 
 ## ------------LAYOUTS-----------------
-# 1st define a layout
+**1st define a layout**
 ``` python 
 layout = [
     [sg.Button('Button', size=(10, 2))],
@@ -141,12 +141,12 @@ layout = [
     [sg.Yes(), sg.No()] ]
 ```
 
-# 2nd your defined layout in your window, by naming like "Buttons"
+**2nd your defined layout in your window, by naming like "Buttons"**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 3rd track the events and values from your window, and make sure you have to close your window after reading window
+**3rd track the events and values from your window, and make sure you have to close your window after reading window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -155,22 +155,22 @@ print(event, values)
 
 
 ## ------------MENU BUTTONS-----------------
-# 1st define a menu
+**1st define a menu**
 ``` python 
 menu = ['Menu', ['File', 'Edit', 'View', ['List', 'Details', 'Full']]]
 ```
 
-# 2nd call the defined menu into your layout
+**2nd call the defined menu into your layout**
 ``` python 
 layout = [[sg.ButtonMenu('Menu', menu_def=menu)]]
 ```
 
-# 3rd call your layout inside a window
+**3rd call your layout inside a window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th and make sure you have to close your window after reading window
+**4th and make sure you have to close your window after reading window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -178,25 +178,25 @@ print(event, values)
 ```
 
 ## ------------CANVAS-----------------
-# 1st define a layout
+**1st define a layout**
 ``` python 
 layout = [[sg.Canvas(size=(100, 100), background_color='blue', key='canvas')],
            [sg.Ok(), sg.Cancel()]]
 ```
 
-# 2nd define a window calling a layout inside a window
+**2nd define a window calling a layout inside a window**
 ``` python 
 window = sg.Window('Buttons', layout)
 window.finalize()
 ```
 
-# 3rd draw a oval inside a canvas
+**3rd draw a oval inside a canvas**
 ``` python 
 canvas = window['canvas']
 cir = canvas.TKCanvas.create_oval(50, 50, 100, 100)
 ```
 
-# 4th get the events and values done on window
+**4th get the events and values done on window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -215,23 +215,23 @@ print(event, values)
 
 ## ------------COLUMN-----------------
 
-# 1st create checkboxes in a column wise and the assign to a variable
+**1st create checkboxes in a column wise and the assign to a variable**
 ``` python 
 col1 = [[sg.Checkbox('checkbox-L', key='-CHECK1L-')], [sg.CBox('Cbox-L', key='-CHECK2L-')], [sg.CB('CB-L')]]
 col2 = [[sg.Checkbox('checkbox-R', key='-CHECK1R-')], [sg.CBox('Cbox-R', key='-CHECK2R-')], [sg.CB('CB-R')]]
 ```
 
-# 2nd and column varibales to your layout
+**2nd and column varibales to your layout**
 ``` python 
 layout = [[sg.Column(col1)], [sg.Column(col2)], [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -239,24 +239,24 @@ print(event, values)
 ```
 
 ## ------------ComboBox-----------------
-# 1st create a list
+**1st create a list**
 ``` python  
 list_values = list('abcdefgh')
 print(list_values)
 ```
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.Combo(values=list_values, size=(5, 4), default_value=list_values[0])],
           [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -264,30 +264,30 @@ event, values = window.read()
 ```
 
 ## ------------Frame-----------------
-# 1st create a list
+**1st create a list**
 ``` python 
 list_values = list('abcdefgh')
 print(list_values)
 ```
 
-# 2nd create FRAME instead of layout
+**2nd create FRAME instead of layout**
 ``` python 
 frame = [[sg.Combo(values=list_values, size=(5, 4), default_value=list_values[0])],
            [sg.CB('Checkbox-l'), sg.CB('Checkbox-r')]]
 ```
 
-# 3rd call a frame into your LAYOUT
+**3rd call a frame into your LAYOUT**
 ``` python 
 layout = [[sg.Frame('My Frame', frame)],
           [sg.Ok(), sg.Cancel()]]
 ```
 
-# 4th call your layout inside your window
+**4th call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 5th track all events in your window by reading and after close the window
+**5th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -295,31 +295,31 @@ print(event, values)
 ```
 
 ## ------------Horizonital-Seperator-----------------
-# 1st create a list
+**1st create a list**
 ``` python 
 list_values = list('abcdefgh')
 print(list_values)
 ```
 
-# 2nd create FRAME instead of layout
+**2nd create FRAME instead of layout**
 ``` python 
 frame = [[sg.Combo(values=list_values, size=(5, 4), default_value=list_values[0])],
            [sg.HorizontalSeparator()], # defining Horizonital seperator between to different element
            [sg.CB('Checkbox-l'), sg.CB('Checkbox-r')]]
 ```
 
-# 3rd call a frame into your LAYOUT
+**3rd call a frame into your LAYOUT**
 ``` python 
 layout = [[sg.Frame('My Frame', frame)],
           [sg.Ok(), sg.Cancel()]]
 ```
 
-# 4th call your layout inside your window
+**4th call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 5th track all events in your window by reading and after close the window
+**5th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -327,25 +327,25 @@ print(event, values)
 ```
 
 ## ------------Image-----------------
-# 1st create an image inside your layout
+**1st create an image inside your layout**
 ``` python 
 layout = [[sg.Image('./Image.png')],
           [sg.Ok(), sg.Cancel()]]
 ```
 
-# 2nd call your layout inside your window
+**2nd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 3rd track all events in your window by reading and after close the window
+**3rd track all events in your window by reading and after close the window**
 ``` python event, values = window.read()
 window.close()
 print(event, values)
 ```
 
 ## ------------Input-----------------
-# 1st create a Layout
+**1st create a Layout**
 ``` python 
 layout = [[sg.Text('Input-1'), sg.Input(Key='-IN1-')],
            [sg.Text('Input-2'), sg.In(Key='-IN2-')],
@@ -353,12 +353,12 @@ layout = [[sg.Text('Input-1'), sg.Input(Key='-IN1-')],
            [sg.Ok(), sg.Cancel()]]
 ```
 
-# 2nd call your layout inside your window
+**2nd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 3rd track all events in your window by reading and after close the window
+**3rd track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -366,24 +366,24 @@ print(event, values)
 ```
 
 # ------------ListBox-----------------
-# 1st create a list
+**1st create a list**
 ``` python 
 list_values = list('abcdefgh')
 print(list_values)
 ```
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.Listbox(values=list_values, size=(5, 4), default_value=list_values[0])],
          [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -392,23 +392,24 @@ print(event, values)
 
 ## ------------Menu-----------------
 
+**1st create menu list and sub list**
 ``` python 
 menu = [['&File', ['!&Open', '&Save', '---', 'E&Exit']],
         ['&Edit', ['Copy', 'Paste']]]
 ```
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.Menu(menu)],
            [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout, size=(200, 200))
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -417,18 +418,18 @@ print(event, values)
 
 ## ------------MultiLine-----------------
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.Multiline(size(100, 20))],
           [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout, size=(200, 200))
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -437,19 +438,19 @@ event, values = window.read()
 
 ## ------------Output Element-----------------
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.Output(size(100, 20))],
            [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout, size=(200, 200))
 ```
 
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  if event == 'Ok':
@@ -461,18 +462,18 @@ event, values = window.read()
 
 ## ------------Progress-----------------
 
-# 2nd create layout for list
+**2nd create layout for list**
 ``` python 
 layout = [[sg.ProgressBar(max_value=1000, orientation='h', size(20,20), key='-PROD-')],
            [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  for i in range(1000):
@@ -486,22 +487,22 @@ event, values = window.read()
 
 ## ------------Raido Button-----------------
 
-# 1st create checkboxes in a column wise and the assign to a variable
+**1st create checkboxes in a column wise and the assign to a variable**
 ``` python 
 col1 = [[sg.Radio('Radio-1', group_id=1)], [sg.Radio('Radio-2', group_id=1)], [sg.Radio('Radio-3', group_id=1)]]
  col2 = [[sg.Radio('Radio-4', group_id=2)], [sg.Radio('Radio-5', group_id=2)], [sg.Radio('Radio-6', group_id=2)]]
 ```
-# 2nd and column varibales to your layout
+**2nd and column varibales to your layout**
 ``` python 
 layout = [[sg.Column(col1)], [sg.Column(col2)], [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -534,12 +535,12 @@ layout = [[sg.Spin(initial_value=3, values=list(range(1, 10)), size=(5, 5))],
              [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -554,12 +555,12 @@ layout = [[sg.Multiline(size(100, 20))],
              [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -568,24 +569,24 @@ print(event, values)
 
 # ------------TABS-----------------
 
-# 1st create checkboxes in a column wise and the assign to a variable
+**1st create checkboxes in a column wise and the assign to a variable**
 ``` python 
 tab1 = [[sg.Text('Tab 1 content')], [sg.I(size=(30, 1))], [sg.Text('Tab 1 Name content')], [sg.I(size=(30, 1))],
          , [sg.Text('Tab 1 Surname content')], [sg.I(size=(30, 1))]]
  tab2 = [[sg.Text('Tab 2 text')], [sg.I(size=(30, 1))], [sg.Text('Tab 2 Name')], [sg.I(size=(30, 1))]]
 ```
 
-# 2nd and column varibales to your layout
+**2nd and column varibales to your layout**
 ``` python 
 layout = [[sg.TabGroup([[sg.Tab('Tab-1', tab1), sg.Tab('Tab-2', tab2)]])]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -608,18 +609,18 @@ data = []
  print(heading)
 ```
 
-# 2nd and column varibales to your layout
+**2nd and column varibales to your layout**
 ``` python 
 layout = [[sg.Table(headings=heading, values=data)],
              [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
@@ -633,12 +634,12 @@ layout = [[sg.Text('Hello')],
              [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
 window.close()
@@ -646,28 +647,28 @@ print(event, values)
 ```
 
 ## ------------Browsing files with Buttons-----------------
-# Method1- input text and browser button
+**Method1- input text and browser button**
 ``` python 
 layout = [[sg.Text('Please Choose a file')],
              [sg.I(Key='-FILE-')],
              [sg.FileBrowse('Browse', file_types=(('Text files', '*.txt'),), target='-FILE-')],
              [sg.Ok(), sg.Cancel()]]
 ```
-# Method2- input text and browser button in a same line.
+**Method2- input text and browser button in a same line.**
 
 ``` python 
 layout = [[sg.Text('Please Choose a file')],
              [sg.I(Key='-FILE-'), sg.FileBrowse('Browse', file_types=(('Text files', '*.txt'),), target='-FILE-')],
              [sg.Ok(), sg.Cancel()]]
 ```
-# Method3- input text and browser button
+**Method3- input text and browser button**
 ``` python 
 layout = [[sg.Text('Please Choose a file'), sg.I(Key='-FILE-')],
              [sg.FileBrowse('Browse', file_types=(('Text files', '*.txt'),), target='-FILE-')],
              [sg.Ok(), sg.Cancel()]]
 ```
 
-# here is the types of buttons, you can call
+**here is the types of buttons, you can call**
 ``` python 
 layout = [[sg.CalendarButton('Calendar')],
            [sg.ColorChooserButton('Color')],
@@ -677,12 +678,12 @@ layout = [[sg.CalendarButton('Calendar')],
             [sg.Ok(), sg.Cancel()]]
 ```
 
-# 3rd call your layout inside your window
+**3rd call your layout inside your window**
 ``` python 
 window = sg.Window('Buttons', layout)
 ```
 
-# 4th track all events in your window by reading and after close the window
+**4th track all events in your window by reading and after close the window**
 ``` python 
 event, values = window.read()
  window.close()
