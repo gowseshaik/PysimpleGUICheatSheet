@@ -1,8 +1,8 @@
 ## PysimpleGUICheatSheet
 **Simple GUI program , which shows as follows** 
-- 1. text boxes for user inputs  
-- 2. shows loading gif image
-- 3. and then shows a popup windows with your input text as output window
+- Text boxes for user inputs  
+- Shows loading gif image
+- And then shows a popup windows with your input text as output window
           
 ``` python 
 import PySimpleGUI as sg
