@@ -30,11 +30,11 @@ else:
     sg.popup_scrolled('Oops!, You entered: None , Please try again!')
 ```
 
-# it will shows the popup with title and close, minimize and maximize buttons
+ it will shows the popup with title and close, minimize and maximize buttons
 ``` python
 sg.popup('You entered', f_name, s_name)
 ```
-# it will shows the popup without title, - [] X buttons
+ it will shows the popup without title, - [] X buttons
 ``` python 
 sg.popup_annoying('You entered', f_name, s_name)
 sg.popup_no_border('You entered', f_name, s_name)
@@ -130,7 +130,7 @@ sg.popup("Hi Gouse", grab_anywhere=True)
 sg.popup("Hi Gouse", grab_anywhere=False)
 ```
 
-## *------------LAYOUTS-----------------*
+## ------------LAYOUTS-----------------
 # 1st define a layout
 ``` python 
 layout = [
@@ -154,7 +154,7 @@ print(event, values)
 ```
 
 
-## *------------MENU BUTTONS-----------------*
+## ------------MENU BUTTONS-----------------
 # 1st define a menu
 ``` python 
 menu = ['Menu', ['File', 'Edit', 'View', ['List', 'Details', 'Full']]]
@@ -177,7 +177,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------CANVAS-----------------*
+## ------------CANVAS-----------------
 # 1st define a layout
 ``` python 
 layout = [[sg.Canvas(size=(100, 100), background_color='blue', key='canvas')],
@@ -202,7 +202,7 @@ event, values = window.read()
 window.close()
 ```
 
-##*------------Check boxes-----------------*
+## ------------Check boxes-----------------
 
 ``` python 
 layout = [[sg.Checkbox('checkbox', key='-CHECK1-')], [sg.CBox('Cbox', key='-CHECK2-')],
@@ -213,7 +213,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------COLUMN-----------------*
+## ------------COLUMN-----------------
 
 # 1st create checkboxes in a column wise and the assign to a variable
 ``` python 
@@ -238,7 +238,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------ComboBox-----------------*
+## ------------ComboBox-----------------
 # 1st create a list
 ``` python  
 list_values = list('abcdefgh')
@@ -263,7 +263,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Frame-----------------*
+## ------------Frame-----------------
 # 1st create a list
 ``` python 
 list_values = list('abcdefgh')
@@ -294,7 +294,7 @@ window.close()
 print(event, values)
 ```
 
-# *------------Horizonital-Seperator-----------------*
+## ------------Horizonital-Seperator-----------------
 # 1st create a list
 ``` python 
 list_values = list('abcdefgh')
@@ -326,7 +326,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------Image-----------------*
+## ------------Image-----------------
 # 1st create an image inside your layout
 ``` python 
 layout = [[sg.Image('./Image.png')],
@@ -344,7 +344,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------Input-----------------*
+## ------------Input-----------------
 # 1st create a Layout
 ``` python 
 layout = [[sg.Text('Input-1'), sg.Input(Key='-IN1-')],
@@ -365,7 +365,7 @@ window.close()
 print(event, values)
 ```
 
-# *------------ListBox-----------------*
+# ------------ListBox-----------------
 # 1st create a list
 ``` python 
 list_values = list('abcdefgh')
@@ -390,7 +390,7 @@ event, values = window.read()
 print(event, values)
 ```
 
-## *------------Menu-----------------*
+## ------------Menu-----------------
 
 ``` python 
 menu = [['&File', ['!&Open', '&Save', '---', 'E&Exit']],
@@ -415,7 +415,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------MultiLine-----------------*
+## ------------MultiLine-----------------
 
 # 2nd create layout for list
 ``` python 
@@ -435,7 +435,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Output Element-----------------*
+## ------------Output Element-----------------
 
 # 2nd create layout for list
 ``` python 
@@ -459,7 +459,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Progress-----------------*
+## ------------Progress-----------------
 
 # 2nd create layout for list
 ``` python 
@@ -484,7 +484,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Raido Button-----------------*
+## ------------Raido Button-----------------
 
 # 1st create checkboxes in a column wise and the assign to a variable
 ``` python 
@@ -508,7 +508,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------Slider-----------------*
+## ------------Slider-----------------
 
 ``` python 
 layout = [[sg.slider(range=(1, 100), default_value=50, orientation='h')], # orientation='v'
@@ -527,7 +527,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Spin-----------------*
+## ------------Spin-----------------
 
 ``` python 
 layout = [[sg.Spin(initial_value=3, values=list(range(1, 10)), size=(5, 5))],
@@ -546,7 +546,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Status Bar-----------------*
+## ------------Status Bar-----------------
 
 ``` python 
 layout = [[sg.Multiline(size(100, 20))],
@@ -566,7 +566,7 @@ window.close()
 print(event, values)
 ```
 
-# *------------TABS-----------------*
+# ------------TABS-----------------
 
 # 1st create checkboxes in a column wise and the assign to a variable
 ``` python 
@@ -592,7 +592,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Tables-----------------*
+## ------------Tables-----------------
 
 ``` python 
 data = []
@@ -626,7 +626,7 @@ event, values = window.read()
  print(event, values)
 ```
 
-## *------------Text-----------------*
+## ------------Text-----------------
 ``` python 
 layout = [[sg.Text('Hello')],
              [sg.T('World')],
@@ -645,7 +645,7 @@ window.close()
 print(event, values)
 ```
 
-## *------------Browsing files with Buttons-----------------*
+## ------------Browsing files with Buttons-----------------
 # Method1- input text and browser button
 ``` python 
 layout = [[sg.Text('Please Choose a file')],
